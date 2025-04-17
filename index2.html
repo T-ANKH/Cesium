@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <title>Cesium 3D Model Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/cesium@1.107/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+   
+    <style>
+        html, body, #cesiumContainer {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #additionalContent {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cesiumContainer"></div>
+    <div id="additionalContent">
+        <!-- 这里是 index.html 的内容，可以替换为实际内容 -->
+        <h1>Welcome to Cesium</h1>
+        <p>This is additional content from index.html.</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/cesium@1.107/Build/Cesium/Cesium.js"></script>
+    <script> 
+    // 设置 Cesium Ion 访问令牌
+        Cesium.Ion.defaultAccessToken =
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0YzIyNWRlZi1hZTExLTQ3OWEtODhlNi1iM2Q3OGE4YjlmNzQiLCJpZCI6Mjg0MTc3LCJpYXQiOjE3NDQ4OTM1MjN9.PQUbjyg1gRrQXVmQRNBJjnOuJKSKQESaFYtajV8zvmY';
+       const viewer = new Cesium.Viewer("cesiumContainer", {
+        infoBox: false
+        });
+    </script>
+    <script src="test.js"></script>
+</body>
+</html>
