@@ -15,6 +15,7 @@ export function createContentsButton(viewer) {
     button.style.position = 'absolute';
     button.style.top = '5px';
     button.style.left = '5px';
+    button.title = "成果"; // 鼠标悬停时显示“成果”
 
     // 创建目录容器
     const dropdown = document.createElement('div');
