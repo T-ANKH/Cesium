@@ -11,7 +11,9 @@
 ## 开发 ##
 - 在`src/contents`下新建自己的项目文件
 - 推荐命名：`name_event.js`
-- 将内容写在`export function name_event(viewer){...}`中，意思是写完后导出该函数。一个js文件对应一个导出
+- 将内容写在`export function name_event(viewer){...}`中，意思是写完后导出该函数。
+- 其中`viewer`是`cesium`的`viewer`对象，使用`viewer`可以实现地图的操作。
+    - 建议需要用到viewer的功能都在参数里面添加viewer，方便viewer的传递。
 - 完成开发后，修改`src/json/contents.json`将自己的项目添加到目录中
 - 添加格式：
     - `module` 可选，不指定模块名就直接用onclick的名字查找
@@ -21,7 +23,7 @@
 ```
     "项目名称": {
         “module”: "模块名",
-        "onclick": "方法所在的js文件名",
+        "onclick": "模块下导出的方法名",
         "position": [
             "视角坐标",  
         ]
@@ -32,7 +34,7 @@
     - 对应使用`Cartesian3.fromDegrees` 设置 `destination`（常用于定位到某点，带高度）。
     - 第二种：`"position": [west, south, east, north]`
     - 对应使用`Rectangle.fromDegrees` 设置 `destination`（常用于定位到区域）。
-    - 第三种：直接使用setView支持的对象（不建议）
+    - 第三种：直接使用setView支持的对象（不建议，因为没测试过）
 ## 推送 ##
 - 推送前请先执行`npm run build`，生成`dist`文件夹
 - 新建一个分支再推送,后续考虑找人来做`merge`

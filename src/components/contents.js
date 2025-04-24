@@ -21,7 +21,7 @@ export function createContentsButton(viewer) {
     dropdown.id = 'contents_dropdown';
     dropdown.style.position = 'absolute';
     dropdown.style.top = '40px';
-    dropdown.style.left = '5px';
+    dropdown.style.left = '7px';
     dropdown.style.display = 'none';
     dropdown.style.flexDirection = 'column';
 
