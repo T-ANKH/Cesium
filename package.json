@@ -1,19 +1,36 @@
 {
-  "name": "cesium",
+  "name": "cesiumstudy",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "用于cesium及协同开发学习",
+  "private": "true",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack serve --config webpack.config.js --open"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/T-ANKH/Cesium.git"
+  },
+  "keywords": [
+    "cesium"
+  ],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
+  "bugs": {
+    "url": "https://github.com/T-ANKH/Cesium/issues"
+  },
+  "homepage": "https://github.com/T-ANKH/Cesium#readme",
+  "devDependencies": {
+    "@babel/core": "^7.26.10",
     "cesium": "^1.128.0",
-    "cors": "^2.8.5",
-    "express": "^5.1.0",
-    "http-proxy-middleware": "^3.0.5"
+    "copy-webpack-plugin": "^13.0.0",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.3",
+    "style-loader": "^4.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.99.6",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1"
   }
 }

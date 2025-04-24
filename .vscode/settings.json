@@ -1,8 +1,0 @@
-{
-    "liveServer.settings.proxy": {
-        "/geoserver": {
-            "enable": true,
-            "baseUri": "http://localhost:8080/geoserver"
-        }
-    }
-}
