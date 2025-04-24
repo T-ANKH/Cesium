@@ -1,4 +1,5 @@
 const path = require("path");
+require('dotenv').config();
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const cesiumSource = "node_modules/cesium/Source";
@@ -58,6 +59,7 @@ module.exports = {
         new webpack.DefinePlugin({
             // 定义Cesium加载资源文件时使用的相对基础路径
             CESIUM_BASE_URL: JSON.stringify(""),
+            CESIUM_TOKEN: JSON.stringify(process.env.CESIUM_TOKEN || "")
         }),
     ],
     mode: "development",

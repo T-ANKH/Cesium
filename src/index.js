@@ -9,7 +9,7 @@ import "../src/css/main.css";
 import { createContentsButton } from './components/contents.js';
 
 // Your access token can be found at: https://cesium.com/ion/tokens.
-Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxYzZjMmU1ZC1lZjM4LTQ0ZjgtYjQ4NS04ZWNkZjcwYmM4MDYiLCJpZCI6MjU0MDIwLCJpYXQiOjE3NDIxMDczNjN9.V_8DpqsGs799P8KdP9A7yetgTq7sO2X5JJt3AqkMOuw";
+Ion.defaultAccessToken = CESIUM_TOKEN;
 
 // Initialize the Cesium Viewer in the HTML element with the `cesiumContainer` ID.
 export const viewer = new Viewer("cesiumContainer", {
