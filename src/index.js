@@ -3,12 +3,10 @@ import {
     Viewer,
     Terrain,
     createOsmBuildingsAsync,
-    Cartesian3,
-    Math,
 } from "cesium";
 import "cesium/Widgets/widgets.css";
 import "../src/css/main.css";
-import { createContentsButton } from './components/contents-button';
+import { createContentsButton } from './components/contents.js';
 
 // Your access token can be found at: https://cesium.com/ion/tokens.
 Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxYzZjMmU1ZC1lZjM4LTQ0ZjgtYjQ4NS04ZWNkZjcwYmM4MDYiLCJpZCI6MjU0MDIwLCJpYXQiOjE3NDIxMDczNjN9.V_8DpqsGs799P8KdP9A7yetgTq7sO2X5JJt3AqkMOuw";
