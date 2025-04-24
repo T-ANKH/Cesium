@@ -40,13 +40,17 @@ export function createContentsButton(viewer) {
         itemButton.style.margin = '5px 0';
 
         // 设置点击事件
+        const moduleName = content_config[item].module || content_config[item].onclick; // 兼容老配置
         const clickHandler = content_config[item].onclick;
         const position = content_config[item].position;
 
+        /**
+         * 按钮点击事件，动态加载模块并调用指定方法
+         */
         itemButton.onclick = async () => {
             try {
-                const module = await import(`../contents/${clickHandler}.js`);
-                if (module[clickHandler]) {
+                const module = await import(`../contents/${moduleName}.js`);
+                if (module && typeof module[clickHandler] === "function") {
                     module[clickHandler](viewer);
                     // 兼容多种视角设置方式
                     if (position) {
@@ -68,9 +72,11 @@ export function createContentsButton(viewer) {
                         }
                         // 其他情况可根据需要扩展
                     }
+                } else {
+                    console.error(`模块 ${moduleName}.js 中未找到导出的方法 ${clickHandler}`);
                 }
             } catch (error) {
-                console.error(`加载模块 ${clickHandler} 失败:`, error);
+                console.error(`加载模块 ${moduleName} 失败:`, error);
             }
         };
 
