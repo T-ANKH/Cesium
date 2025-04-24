@@ -5,7 +5,7 @@
 # 使用教程 #
 - Clone当前项目
 - 执行`npm install`下载依赖
-- 本地根目录新建文件夹`.env`，内容`CESIUM_TOKEN=你的token`,使用环境变量的方式引入token，防止泄露
+- 本地根目录新建文件`.env`，内容`CESIUM_TOKEN=你的token`,使用环境变量的方式引入token，防止泄露
 - 执行`npm run build`生成`dist`文件夹
 - 执行`npm run start`启动本地服务器，默认端口为`8081`，退出服务器在终端双击`ctrl+c`
 ## 开发 ##
