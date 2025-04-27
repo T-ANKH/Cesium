@@ -33,5 +33,9 @@
             37.7749,
             300
         ]
+    },
+    "风场绘制": {
+        "onclick": "cdd_fchz",
+        "position": null
     }
 }
